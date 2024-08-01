@@ -1,0 +1,149 @@
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.up_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(82, 1, 0, 1);
+    color: white;
+    padding: 10px 20px;
+}
+
+.com_logo {
+    height: 50px;
+}
+
+.user_icon {
+    margin: 10px 20px;
+    height: 35px;
+    width: 35px;
+    padding: 2px;
+    background-color: #db4a26;
+    border-radius: 0.15rem;
+    cursor: pointer;
+    font-size: small;
+    font-display: center;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: rgba(155, 90, 70, 1);
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li {
+    position: relative;
+    margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar nav ul li:hover > a, .sidebar nav ul li.active > a {
+    background-color: rgba(62, 18, 19, 1);
+    margin: 0px 10px;
+    border-radius: 2px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #dcdcdc;
+}
+
+.inventory h2 {
+    margin-top: 0;
+}
+
+.search-filter-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-filter-container i {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+#inventoryTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#inventoryTable th, #inventoryTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#inventoryTable th {
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+#inventoryTable th:hover {
+    background-color: #ddd;
+}
+
+#inventoryTable img.product-image {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#inventoryTable input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+#inventoryTable input[type="checkbox"] {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+    .container {
+        flex-direction: column;
+    }
+}

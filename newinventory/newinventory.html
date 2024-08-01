@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="newinventory.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="up_nav">
+        <div class="upper">
+            <img src="images/goya(1).png" alt="logo" class="com_logo">
+        </div>
+        <div class="user_icon" onclick="togglePopup()">
+            <h2>Ms</h2>
+        </div>
+    </div>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="manage_orders.html"><i class="fas fa-box"></i> Orders</a></li>
+                    <li><a href="manage_products.html"><i class="fas fa-tags"></i> Products</a></li>
+                    <li><a href="collections.html"><i class="fa-solid fa-boxes-stacked"></i> Collections</a></li>
+                    <li><a href="newinventory.html"><i class="fas fa-warehouse"></i> Inventory</a></li>
+                    <li><a href="purchase_orders.html"><i class="fas fa-file-invoice-dollar"></i> Purchase Orders</a></li>
+                    <li><a href="gift_cards.html"><i class="fas fa-gift"></i> Gift Cards</a></li>
+                    <li><a href="discounts.html"><i class="fas fa-percent"></i> Discounts</a></li>
+                </ul>
+            </nav>
+        </aside>
+    
+        <div class="main-content">
+            <div class="inventory">
+                <h2>Inventory</h2>
+                <div class="search-filter-container">
+                    <i class="fas fa-search" onclick="toggleSearch()"></i>
+                    <input type="text" id="searchInput" placeholder="Search for products.." style="display: none;">
+                    <i class="fas fa-filter" onclick="toggleFilter()"></i>
+                    <select id="filterSelect" style="display: none;">
+                        <option value="">All Products</option>
+                        <option value="withSKU">With SKU</option>
+                        <option value="withoutSKU">Without SKU</option>
+                    </select>
+                    <i class="fas fa-sort" onclick="showSortOptions()"></i>
+                </div>
+                <div class="table-container">
+                    <table id="inventoryTable">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox"></th>
+                                <th onclick="sortTable(1)">Product</th>
+                                <th onclick="sortTable(2)">SKU</th>
+                                <th onclick="sortTable(3)">Unavailable</th>
+                                <th onclick="sortTable(4)">Available</th>
+                                <th onclick="sortTable(5)">On-hand</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>
+                                    <img src="path/to/image1.jpg" class="product-image">
+                                    Lorem ipsum
+                                </td>
+                                <td>20</td>
+                                <td>0</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>
+                                    <img src="path/to/image2.jpg" class="product-image">
+                                    Lorem ipsum
+                                </td>
+                                <td>No SKU</td>
+                                <td>0</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>
+                                    <img src="path/to/image3.jpg" class="product-image">
+                                    Lorem ipsum
+                                </td>
+                                <td>100</td>
+                                <td>0</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>
+                                    <img src="path/to/image4.jpg" class="product-image">
+                                    Lorem ipsum
+                                </td>
+                                <td>No SKU</td>
+                                <td>0</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>
+                                    <img src="path/to/image5.jpg" class="product-image">
+                                    Lorem ipsum
+                                </td>
+                                <td>100</td>
+                                <td>0</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="newinventory.js"></script>
+</body>
+</html>
